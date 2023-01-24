@@ -1,0 +1,122 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../js/menu.js"></script>
+    <script src="../js/script.js"></script>
+
+    <title>Update Record</title>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-bar-block" style="display:none" id="mySidebar">
+        <button onclick="w3_close()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+        <a href="#" class="w3-bar-item w3-button">My Dashboard</a>
+        <a href="#" class="w3-bar-item w3-button">My </a>
+        <a href="#" class="w3-bar-item w3-button">C</a>
+        <a href="#" class="w3-bar-item w3-button">O</a>
+        <a href="#" class="w3-bar-item w3-button">R</a>
+        <a href="#" class="w3-bar-item w3-button">L</a>
+    </div>
+
+    <div class="w3-yellow">
+        <button class="w3-button w3-yellow w3-xlarge" onclick="w3_open()">☰</button>
+        <div class="w3-container">
+            <h3>Update Record</h3>
+
+        </div>
+    </div>
+    <div class="w3-bar w3-yellow">
+        <a href="userTable.php" class="w3-bar-item w3-button w3-right">Back</a>
+    </div>
+    <div class="w3-content w3-padding-32">
+        <form class="w3-card w3-padding" action="UpdateCemeteryTable.php" method="post" enctype="multipart/form-data" onsubmit="return confirm('Are you sure?')">
+            <div class="w3-container w3-yellow">
+                <h3>Your Reocrd</h3>
+            </div>
+            <div class="w3-container w3-center">
+                <img class="w3-image w3-margin" src="../res/cemetery/<?php echo $cmid . '.png' ?>" style="height:100%;width:400px"><br>
+                <input type="file" name="fileToUpload" onchange="previewFile()">
+            </div>
+            <hr>
+            <input type="hidden" name="prid" value="<?php echo $cmid ?>">
+            <div class="w3-row-padding">
+                    
+            <div class="w3-left" style="padding-right:4px">
+  <br>
+  <p>
+  <label><b>Name_Deceased</b></label>
+                        <input class="w3-input w3-round-xxlarge w3-border" type="Name_Deceased" name="Name_Deceased" id="idName_Deceased"required>
+                    </p>
+                    <p>
+                      
+                        <label><b>Years_of_Born</b></label>
+                        
+                                <input type="date" name="dateofbirth" class="form-control"" required>
+                                
+                    </p>
+                    <p>
+                        <label><b>Years_of_Died</b></label>
+                       
+                                <input type="date" name="Years_of_Died" class="form-control"  required>
+                    </p>
+                    
+                    <p>
+                        <label><b>Location</b></label>
+                        <input class="w3-input w3-round-xxlarge w3-border" type="Location" name="Location" id="idLocation"required>
+</p>
+
+
+
+<div class="w3-center" style="padding-right:4px">
+<label><b>Selection</b></label>
+                    <p> <select class="w3-input w3-block w3-round w3-border" name="Section">
+                            <option value="Select" selected>Select</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+
+                        </select>
+                    </p>
+                </div>
+                
+                        <label><b>Years_Buried</b></label>
+                        <input class="w3-input w3-round-xxlarge w3-border" type="Years_Buried" name="Years_Buried" id="idYears_Buried"
+                            placeholder="Enter your Years_Buried" required>
+                    </p>
+                    <p>
+                      
+                     
+                    <p>
+                        <input type="submit" class="w3-btn w3-round-xxlarge w3-block w3-grey" name="submit" value="Save Data">
+                    </p>
+        
+                    </div>
+                    
+                    </form>
+
+              </div>
+          </div>
+          
+
+      </div>
+      
+      <!-- col -->
+        </div>
+     </div>
+  </div>
+    <!-- header -->
+
+  <!-- footer -->
+  <footer class="w3-row-padding w3-padding-16 w3-center w3-grey">
+  <h6>© 2023 Cemetery Management System</h6>
+    </footer>
+  </body>
+</html>
